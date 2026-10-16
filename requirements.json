@@ -1,0 +1,1072 @@
+[
+  {
+    "id": "US 01.01.01",
+    "statement": "As an entrant, I want to search for campsites.",
+    "points": 3,
+    "risk": "Low",
+    "halfway": true,
+    "acceptance": "Typing a name or place shows matching campsites.",
+    "screens": [
+      "S02",
+      "S03"
+    ],
+    "flows": [
+      "F1"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.01.02",
+    "statement": "As an entrant, I want to filter campsites by location, date, and number of guests.",
+    "points": 5,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "Location, dates, and guest count filters can be used together.",
+    "screens": [
+      "S02",
+      "S03"
+    ],
+    "flows": [
+      "F1"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.01.03",
+    "statement": "As an entrant, I want to see a list of campsites based on my filters.",
+    "points": 3,
+    "risk": "Low",
+    "halfway": true,
+    "acceptance": "The list updates when filters are applied or cleared.",
+    "screens": [
+      "S03"
+    ],
+    "flows": [
+      "F1"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.01.04",
+    "statement": "As an entrant, I want to see campsite summary information including name, location, maximum occupancy, and rating.",
+    "points": 2,
+    "risk": "Low",
+    "halfway": true,
+    "acceptance": "Every campsite card shows name, place, max guests, and rating (or Not rated).",
+    "screens": [
+      "S03"
+    ],
+    "flows": [
+      "F1"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.01.05",
+    "statement": "As an entrant, I want to see details of a campsite.",
+    "points": 5,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "Details show price, rules, stay dates, image if present, and a View on map button.",
+    "screens": [
+      "S04"
+    ],
+    "flows": [
+      "F1"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.01.06",
+    "statement": "As an entrant, I want to join an active lottery from the campsite details screen.",
+    "points": 2,
+    "risk": "Low",
+    "halfway": true,
+    "acceptance": "Join Lottery is shown on details only while registration is open.",
+    "screens": [
+      "S04",
+      "S06"
+    ],
+    "flows": [
+      "F1",
+      "F2"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.02.01",
+    "statement": "As an entrant, I want to join the waiting list for a campsite lottery.",
+    "points": 5,
+    "risk": "High",
+    "halfway": true,
+    "acceptance": "One entrant can join a lottery once; joining saves a waitlist record.",
+    "screens": [
+      "S06"
+    ],
+    "flows": [
+      "F2"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.02.02",
+    "statement": "As an entrant, I want to leave the waiting list for a campsite lottery.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "An entrant can leave before registration closes; the entry is removed or marked left.",
+    "screens": [
+      "S06"
+    ],
+    "flows": [
+      "F2"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.03.01",
+    "statement": "As an entrant, I want to receive a notification when I win the campsite lottery.",
+    "points": 5,
+    "risk": "High",
+    "halfway": true,
+    "acceptance": "Selected entrants have a saved win notice and receive FCM push when enabled.",
+    "screens": [
+      "S07",
+      "S08"
+    ],
+    "flows": [
+      "F3"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.03.02",
+    "statement": "As an entrant, I want to receive a notification when I lose the campsite lottery.",
+    "points": 5,
+    "risk": "High",
+    "halfway": true,
+    "acceptance": "Not selected entrants have a saved loss notice and receive FCM push when enabled.",
+    "screens": [
+      "S07"
+    ],
+    "flows": [
+      "F3"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.04.01",
+    "statement": "As an entrant, if I win the lottery, I want to see available dates that I can reserve the campsite for.",
+    "points": 5,
+    "risk": "High",
+    "halfway": true,
+    "acceptance": "A winner sees only stay dates that are still open to book.",
+    "screens": [
+      "S08"
+    ],
+    "flows": [
+      "F3"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.04.02",
+    "statement": "As an entrant, if I win a multiple campsite lottery, I want to choose which campsite to reserve and which dates I want.",
+    "points": 8,
+    "risk": "High",
+    "halfway": false,
+    "acceptance": "For a multi-site lottery, the winner picks one offered campsite and open dates.",
+    "screens": [
+      "S08"
+    ],
+    "flows": [
+      "F3"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.04.03",
+    "statement": "As an entrant, if I win the lottery, I want to decline a reservation if I changed my mind or if none of the remaining dates work for me.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "Declining closes the offer so it cannot be booked later.",
+    "screens": [
+      "S08",
+      "S09"
+    ],
+    "flows": [
+      "F3"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.05.01",
+    "statement": "As an entrant, I want to receive confirmation of my campsite reservation.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "A finished booking shows a confirmation screen and reservation number.",
+    "screens": [
+      "S09"
+    ],
+    "flows": [
+      "F3"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.05.02",
+    "statement": "As an entrant, I want to receive reservation by notification or downloadable CSV.",
+    "points": 3,
+    "risk": "Low",
+    "halfway": false,
+    "acceptance": "The user can save a simple CSV receipt on their phone.",
+    "screens": [
+      "S09",
+      "S10",
+      "S07"
+    ],
+    "flows": [
+      "F4"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.06.01",
+    "statement": "As an entrant, I want to view a list of my active reservations.",
+    "points": 3,
+    "risk": "Low",
+    "halfway": true,
+    "acceptance": "Upcoming confirmed reservations show in the Active tab.",
+    "screens": [
+      "S10"
+    ],
+    "flows": [
+      "F4"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.06.02",
+    "statement": "As an entrant, I want to view a list of my past reservations.",
+    "points": 2,
+    "risk": "Low",
+    "halfway": false,
+    "acceptance": "Finished stays show in the Past tab.",
+    "screens": [
+      "S10"
+    ],
+    "flows": [
+      "F4"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.07.01",
+    "statement": "As an entrant, I want to cancel my campsite reservation.",
+    "points": 5,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "Cancel asks for confirmation and frees the saved dates.",
+    "screens": [
+      "S10",
+      "S21"
+    ],
+    "flows": [
+      "F4"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.07.02",
+    "statement": "As an entrant, I want to receive confirmation of my campsite cancellation by notification or downloadable CSV.",
+    "points": 5,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "A cancellation notice is saved; the user can also save a CSV receipt.",
+    "screens": [
+      "S10",
+      "S07"
+    ],
+    "flows": [
+      "F4"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.07.03",
+    "statement": "As an entrant, I want to update my personal information, such as name, email, and phone number, on my profile.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The entrant can edit name, email, phone, and a small profile photo.",
+    "screens": [
+      "S11"
+    ],
+    "flows": [
+      "F5"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.08.01",
+    "statement": "As an entrant, I want to delete my profile.",
+    "points": 5,
+    "risk": "High",
+    "halfway": false,
+    "acceptance": "Delete profile asks to confirm, handles active bookings, and removes user data.",
+    "screens": [
+      "S11",
+      "S21"
+    ],
+    "flows": [
+      "F5"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.09.01",
+    "statement": "As an entrant, I want to be identified by my device, so that I do not have to use a username and password.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "The app signs in anonymously and keeps the same user while app data is kept.",
+    "screens": [
+      "S01",
+      "S11"
+    ],
+    "flows": [
+      "F1",
+      "F5"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.10.01",
+    "statement": "As an entrant, I want to opt out of receiving notifications.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "Turning off alerts prevents push messages; the app still shows important status.",
+    "screens": [
+      "S07",
+      "S11"
+    ],
+    "flows": [
+      "F5"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.11.01",
+    "statement": "As an entrant, I want to see the app policy and guidelines.",
+    "points": 2,
+    "risk": "Low",
+    "halfway": false,
+    "acceptance": "The app has a read-only Policy and Guidelines page.",
+    "screens": [
+      "S11"
+    ],
+    "flows": [
+      "F5"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.12.01",
+    "statement": "As an entrant, I want to view campsite details by scanning the promotional QR code.",
+    "points": 5,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "Scanning a valid campsite QR opens that campsite; invalid codes show an error.",
+    "screens": [
+      "S05",
+      "S04"
+    ],
+    "flows": [
+      "F1"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 01.13.01",
+    "statement": "As an entrant, I want to give a rating for a campsite.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "A signed-in entrant can save or update one 1-to-5 rating per campsite.",
+    "screens": [
+      "S04",
+      "S11"
+    ],
+    "flows": [
+      "F5"
+    ],
+    "role": "Entrant",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.01.01",
+    "statement": "As a campsite owner, I want to register my campsite with the app.",
+    "points": 5,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "An owner can create and save a campsite listing.",
+    "screens": [
+      "S12",
+      "S13"
+    ],
+    "flows": [
+      "F6"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.01.02",
+    "statement": "As a campsite owner, I want to provide campsite details including name, location, description (amenities), maximum occupancy, map location, optional image, and tags.",
+    "points": 8,
+    "risk": "High",
+    "halfway": true,
+    "acceptance": "The form saves required details, geo coordinates, stay dates, price, rules, and an optional compressed image.",
+    "screens": [
+      "S13"
+    ],
+    "flows": [
+      "F6"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.01.03",
+    "statement": "As a campsite owner, I want to update details about my campsite.",
+    "points": 5,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The owner can change the campsite details they own.",
+    "screens": [
+      "S13",
+      "S14"
+    ],
+    "flows": [
+      "F6"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.01.04",
+    "statement": "As a campsite owner, I want to view details of my campsite.",
+    "points": 2,
+    "risk": "Low",
+    "halfway": true,
+    "acceptance": "The owner can open a details page for their campsite.",
+    "screens": [
+      "S14"
+    ],
+    "flows": [
+      "F6"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.02.01",
+    "statement": "As a campsite owner, I want the system to generate a unique QR code that links to the campsite details.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "The owner can view and save a QR code holding the campsite ID.",
+    "screens": [
+      "S14"
+    ],
+    "flows": [
+      "F6"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.03.01",
+    "statement": "As a campsite owner, I want to view a list of my campsites.",
+    "points": 3,
+    "risk": "Low",
+    "halfway": true,
+    "acceptance": "The owner sees only campsites they own.",
+    "screens": [
+      "S12"
+    ],
+    "flows": [
+      "F6"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.04.01",
+    "statement": "As a campsite owner, I want to list my campsite in a lottery for a certain period.",
+    "points": 5,
+    "risk": "High",
+    "halfway": true,
+    "acceptance": "The owner can publish one campsite in a lottery.",
+    "screens": [
+      "S15"
+    ],
+    "flows": [
+      "F7"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.04.02",
+    "statement": "As a campsite owner, I want be able to list multiple campsites in a lottery for a certain period.",
+    "points": 8,
+    "risk": "High",
+    "halfway": false,
+    "acceptance": "The owner can choose two or more of their campsites for one lottery.",
+    "screens": [
+      "S15",
+      "S08"
+    ],
+    "flows": [
+      "F7",
+      "F3"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.04.03",
+    "statement": "As a campsite owner, I want to set a registration period.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "A lottery saves open and close times for registration.",
+    "screens": [
+      "S15"
+    ],
+    "flows": [
+      "F7"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.04.04",
+    "statement": "As a campsite owner, I want to set a booking period.",
+    "points": 5,
+    "risk": "High",
+    "halfway": true,
+    "acceptance": "The owner can set the time window when winners may book.",
+    "screens": [
+      "S15"
+    ],
+    "flows": [
+      "F7"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.04.05",
+    "statement": "As a campsite owner, I want to set the number of lottery winners.",
+    "points": 2,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "The owner can enter how many winners will be drawn.",
+    "screens": [
+      "S15"
+    ],
+    "flows": [
+      "F7"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.04.06",
+    "statement": "As a campsite owner, I want to update my campsite lottery listing.",
+    "points": 5,
+    "risk": "High",
+    "halfway": false,
+    "acceptance": "The owner can update a lottery before it closes, with safe edit rules.",
+    "screens": [
+      "S15",
+      "S16"
+    ],
+    "flows": [
+      "F7"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.04.07",
+    "statement": "As a campsite owner, I want to optionally set a capacity for my lottery waitlist.",
+    "points": 5,
+    "risk": "High",
+    "halfway": false,
+    "acceptance": "The owner can leave waitlist uncapped or enter a maximum number.",
+    "screens": [
+      "S15",
+      "S06"
+    ],
+    "flows": [
+      "F7",
+      "F2"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.05.01",
+    "statement": "As a campsite owner, I want the system to automatically draw winners after the registration period ends.",
+    "points": 13,
+    "risk": "High",
+    "halfway": true,
+    "acceptance": "A scheduled job draws distinct winners after closing, once per lottery.",
+    "screens": [
+      "S16",
+      "S07"
+    ],
+    "flows": [
+      "F7",
+      "F3"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.06.01",
+    "statement": "As a campsite owner, I want to view the currently booked dates for my campsite.",
+    "points": 5,
+    "risk": "High",
+    "halfway": true,
+    "acceptance": "A calendar marks nights already reserved for each campsite.",
+    "screens": [
+      "S17"
+    ],
+    "flows": [
+      "F8"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.07.01",
+    "statement": "As a campsite owner, I want to view a list of active reservations.",
+    "points": 3,
+    "risk": "Low",
+    "halfway": true,
+    "acceptance": "The owner sees active reservations for their own campsites.",
+    "screens": [
+      "S17"
+    ],
+    "flows": [
+      "F8"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.07.02",
+    "statement": "As a campsite owner, I want to view a list of past reservations.",
+    "points": 2,
+    "risk": "Low",
+    "halfway": false,
+    "acceptance": "The owner sees past reservations for their own campsites.",
+    "screens": [
+      "S17"
+    ],
+    "flows": [
+      "F8"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.07.03",
+    "statement": "As a campsite owner, I want to view a list of cancelled reservations.",
+    "points": 2,
+    "risk": "Low",
+    "halfway": false,
+    "acceptance": "The owner sees cancelled and rejected reservations.",
+    "screens": [
+      "S17"
+    ],
+    "flows": [
+      "F8"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.08.01",
+    "statement": "As a campsite owner, I want to reject a reservation.",
+    "points": 5,
+    "risk": "High",
+    "halfway": false,
+    "acceptance": "The owner can reject a reservation for their campsite and free the nights.",
+    "screens": [
+      "S17",
+      "S21"
+    ],
+    "flows": [
+      "F8"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.09.01",
+    "statement": "As a campsite owner, I want to view a list of entrants who have joined the waitlist for my campsite lottery.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "The owner can see entrants who joined the selected lottery.",
+    "screens": [
+      "S16"
+    ],
+    "flows": [
+      "F7"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.10.01",
+    "statement": "As a campsite owner, I want to send notifications to entrants who have joined the waitlist for my campsite lottery.",
+    "points": 5,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The owner can send a one-way notice to the lottery waitlist.",
+    "screens": [
+      "S18"
+    ],
+    "flows": [
+      "F8"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.10.02",
+    "statement": "As a campsite owner, I want to view a list of all notifications I have sent.",
+    "points": 3,
+    "risk": "Low",
+    "halfway": false,
+    "acceptance": "The owner can see a record of the notices they sent.",
+    "screens": [
+      "S18"
+    ],
+    "flows": [
+      "F8"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.11.01",
+    "statement": "As a campsite owner, I want entrants to confirm that they have read the campsite rules and policies before confirming their reservation.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": true,
+    "acceptance": "The entrant must tick I read the rules before booking is allowed.",
+    "screens": [
+      "S08",
+      "S21"
+    ],
+    "flows": [
+      "F3"
+    ],
+    "role": "Owner",
+    "checkpoint": "Halfway",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 02.12.01",
+    "statement": "As a campsite owner, I want to message a user who is reserving my campsite.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The owner can send a private one-way message to a booked entrant.",
+    "screens": [
+      "S18"
+    ],
+    "flows": [
+      "F8"
+    ],
+    "role": "Owner",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.01.01",
+    "statement": "As an admin, I want to remove registered campsites.",
+    "points": 5,
+    "risk": "High",
+    "halfway": false,
+    "acceptance": "The admin can remove a campsite, after a confirm dialog.",
+    "screens": [
+      "S19",
+      "S21"
+    ],
+    "flows": [
+      "F9"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.02.01",
+    "statement": "As an admin, I want to remove profiles.",
+    "points": 5,
+    "risk": "High",
+    "halfway": false,
+    "acceptance": "The admin can disable or remove an entrant profile.",
+    "screens": [
+      "S19",
+      "S21"
+    ],
+    "flows": [
+      "F9"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.03.01",
+    "statement": "As an admin, I want to remove images.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The admin can remove a profile or promo image.",
+    "screens": [
+      "S19",
+      "S21"
+    ],
+    "flows": [
+      "F9"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.04.01",
+    "statement": "As an admin, I want to browse campsites.",
+    "points": 3,
+    "risk": "Low",
+    "halfway": false,
+    "acceptance": "The admin can browse all campsite listings.",
+    "screens": [
+      "S19"
+    ],
+    "flows": [
+      "F9"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.05.01",
+    "statement": "As an admin, I want to browse profiles.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The admin can browse user profiles.",
+    "screens": [
+      "S19"
+    ],
+    "flows": [
+      "F9"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.06.01",
+    "statement": "As an admin, I want to browse uploaded images so I can remove them if necessary.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The admin can browse saved profile and campsite images.",
+    "screens": [
+      "S19"
+    ],
+    "flows": [
+      "F9"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.07.01",
+    "statement": "As an admin, I want to remove campsite owners that violate app policy.",
+    "points": 5,
+    "risk": "High",
+    "halfway": false,
+    "acceptance": "The admin can disable an owner and hide the owner’s campsites.",
+    "screens": [
+      "S19",
+      "S21"
+    ],
+    "flows": [
+      "F9"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.08.01",
+    "statement": "As an admin, I want to review logs of all notifications.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The admin can view saved notification records.",
+    "screens": [
+      "S20"
+    ],
+    "flows": [
+      "F9"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.11.01",
+    "statement": "As an admin, I should be able to be a campsite owner and/or entrant with my admin profile.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The admin can also use normal Entrant and Owner tabs on the same account.",
+    "screens": [
+      "S01",
+      "S20"
+    ],
+    "flows": [
+      "F9",
+      "F5"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "US 03.12.01",
+    "statement": "As an admin, I want to review logs of all messages from campsite owners to entrants who reserved their campsite.",
+    "points": 3,
+    "risk": "Medium",
+    "halfway": false,
+    "acceptance": "The admin can read one-way owner-to-entrant message records.",
+    "screens": [
+      "S20"
+    ],
+    "flows": [
+      "F9"
+    ],
+    "role": "Admin",
+    "checkpoint": "Final",
+    "implementation": "Android Kotlin + Firestore"
+  },
+  {
+    "id": "WOW-01",
+    "statement": "As an entrant, I want the campsite list sorted by how well it matches my search filters.",
+    "points": 5,
+    "risk": "Low",
+    "halfway": false,
+    "checkpoint": "Final",
+    "acceptance": "The list can sort by a simple 0–100 match score using location, dates, and guest count.",
+    "role": "WOW (optional)",
+    "screens": [
+      "S03"
+    ],
+    "flows": [
+      "F1"
+    ],
+    "implementation": "Kotlin calculation on the phone"
+  }
+]
